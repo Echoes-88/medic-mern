@@ -29,10 +29,10 @@ app.use(function (req, res, next) {
 });
 
 const router = express.Router();
-app.use("/user", router);
+app.use("/api/user", router);
 require(__dirname + "/controllers/userController")(router);
 
-app.use("/product", router);
+app.use("/api/product", router);
 require(__dirname + "/controllers/productController")(router);
 
 const port = 8800;
