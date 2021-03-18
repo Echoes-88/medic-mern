@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    padding: 0;
+    padding: 3rem 0;
     background: white;
     font-family: Open-Sans, Helvetica, Sans-Serif;
   };
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     border: 1px dashed;
   };
   input {
-    background-color:#e1e1e1;
+    background-color:white;
   };
   label {
     display:block;
@@ -29,6 +29,17 @@ const GlobalStyle = createGlobalStyle`
   };
   td {
     border: 1px solid black;
+    min-width:2rem;
+    padding:0.5rem 1rem;
+  };
+  .logo {
+    width: 117px;
+    height: 20px;
+    object-fit: contain;
+    object-position: center center;
+  };
+  .strong {
+    font-weight: bold;
   }
 `;
  

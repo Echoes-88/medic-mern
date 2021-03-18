@@ -1,12 +1,18 @@
 import React from 'react';
 
-
+import styled from 'styled-components'
 
 import API from "../../utils/API";
 
 import ListProduct from './ListProduct';
 
 import AddProduct from './AddProduct'
+
+const Disconnect = styled.button`
+  margin-top:1rem;
+  background-color:#1a1a1a;
+  color:white;
+  `
 
 export default function Dashboard() {
 
@@ -27,9 +33,9 @@ export default function Dashboard() {
         <AddProduct />
       </div>
 
-        <button onClick={disconnect} type="submit">
+        <Disconnect onClick={disconnect} type="submit">
           Se déconnecter
-        </button>
+        </Disconnect>
       </div>
     )
   }

@@ -49,7 +49,7 @@ export default function AddProduct() {
                 type="text"
                 name="name"
                 id="name"
-                placeholder="indiquez le nom du produit"
+                placeholder="Nom"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name}
@@ -64,7 +64,7 @@ export default function AddProduct() {
                 type="text"
                 name="description"
                 id="description"
-                placeholder="indiquez le nom du produit"
+                placeholder="Description"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.description}
@@ -79,7 +79,7 @@ export default function AddProduct() {
                 type="text"
                 name="quantity"
                 id="quantity"
-                placeholder="indiquez le nom du produit"
+                placeholder="Quantité"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.quantity}

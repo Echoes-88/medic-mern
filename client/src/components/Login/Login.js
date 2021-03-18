@@ -1,5 +1,6 @@
 import React from "react";
 import API from "../../utils/API";
+import { Link } from 'react-router-dom';
 
   /* YUP */
   import { Formik } from 'formik';
@@ -18,7 +19,8 @@ import API from "../../utils/API";
   export default function Login() {
 
   return (
-
+    <>
+    <h1>Connection au dashboard</h1>
     <Formik
         initialValues={{ email: "", password: ""}}
         validationSchema={validationSchema}
@@ -48,7 +50,7 @@ import API from "../../utils/API";
                 type="email"
                 name="email"
                 id="email"
-                placeholder="indiquez le nom du produit"
+                placeholder="email"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
@@ -63,7 +65,7 @@ import API from "../../utils/API";
                 type="password"
                 name="password"
                 id="password"
-                placeholder="indiquez le nom du produit"
+                placeholder="password"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.password}
@@ -74,13 +76,22 @@ import API from "../../utils/API";
 
             <div className="input-row">
               <button type="submit" disabled={isSubmitting}>
-                Ajouter
+                Connexion
               </button>
+            </div>
+
+            <div className="input-row">
+              <p>Vous n'avez pas de compte ?</p>
+              <Link to="/signup" >
+              <button type="submit">
+                Créer un compte
+              </button>
+              </Link>
             </div>
 
           </form>
         )}
         </Formik>
-
+        </>
     );
 }

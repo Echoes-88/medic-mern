@@ -22,7 +22,7 @@ export default function Dashboard() {
       <tbody>
       {state.products.map((product) => (
           <tr key={product.name}>
-            <td>{product.name}</td>
+            <td className='strong'>{product.name}</td>
             <td>{product.description}</td>
             <td>{product.quantity}</td>
           </tr>
